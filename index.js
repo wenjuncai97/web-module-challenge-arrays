@@ -188,11 +188,22 @@ Use the getAverageWordLength function below to do the following:
 
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
-
-function getAverageWordLength(/*code here*/) {
-  /*code here*/
+// need to use split to separate each item, then have to code something to count how many words in that item for each item. then code the sum and divide by how many total items. 
+function getAverageWordLength(array) {
+  let sumWord = 0;
+  for(let i=0; i < array.length; i++) {
+    const item = array[i];
+    const length = (item.split(' ').length);
+    // console.log(length);
+    // sumWord = sumWord +length;
+    sumWord += length;
+    // console.log(sumWord)
+  } console.log(sumWord);
+    let arrayLength = array.length;
+    console.log(arrayLength)
+    return sumWord / arrayLength;
 }
-
+console.log(getAverageWordLength(originalFlavors));
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪
 Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors 
@@ -207,7 +218,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/) {
+function getRandomFlavors(array1, array2, array3, array4) {
   /*code here*/
 }
 
